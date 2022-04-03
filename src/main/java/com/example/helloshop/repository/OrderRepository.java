@@ -42,7 +42,7 @@ public class OrderRepository {
         CriteriaQuery<Order> cq = cb.createQuery(Order.class);
         Root<Order> o = cq.from(Order.class);
 
-        List<Predicate> criteria = new ArrayList<Predicate>();
+        List<Predicate> criteria = new ArrayList<>();
 
         if (orderSearch.getOrderStatus() != null) {
             Predicate status = cb.equal(o.get("status"), orderSearch.getOrderStatus());
